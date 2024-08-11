@@ -1,4 +1,4 @@
-package entities;
+package zzz.master.REST.library.MTO.Entities;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;

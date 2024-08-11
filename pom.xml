@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>zzz.master</groupId>
-	<artifactId>REST.biblioteca</artifactId>
+	<artifactId>ManyToOneLibraryREST</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>REST.biblioteca</name>
 	<description>API Rest: Biblioteca bidireccional</description>

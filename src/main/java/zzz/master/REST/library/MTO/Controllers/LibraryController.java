@@ -1,6 +1,5 @@
-package controllers;
+package zzz.master.REST.library.MTO.Controllers;
 
-import entities.LibraryEntity;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -8,7 +7,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-import repositories.LibraryRepository;
+import zzz.master.REST.library.MTO.Entities.LibraryEntity;
+import zzz.master.REST.library.MTO.Repositories.LibraryRepository;
+
 import java.net.URI;
 import java.util.Optional;
 

@@ -1,4 +1,4 @@
-package entities;
+package zzz.master.REST.library.MTO.Entities;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
