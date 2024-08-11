@@ -51,7 +51,7 @@ public class LibraryController {
         return ResponseEntity.noContent().build();
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public ResponseEntity<LibraryEntity> deleteLibrary(@PathVariable int id) {
         Optional<LibraryEntity> optionalLibrary = libraryRepository.findById(id);
         if (!optionalLibrary.isPresent()) {

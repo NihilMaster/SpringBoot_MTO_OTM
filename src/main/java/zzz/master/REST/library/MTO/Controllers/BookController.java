@@ -39,6 +39,15 @@ public class BookController {
                 .orElseGet(() -> ResponseEntity.unprocessableEntity().build());
     }
 
+    @GetMapping("/library/{id}")
+    public ResponseEntity<Page<BookEntity>> getBooksByLibraryId (@PathVariable int id, Pageable pageable) {
+        Optional<LibraryEntity> optionalLibrary = libraryRepository.findById(id);
+        if (!optionalLibrary.isPresent()) {
+            return ResponseEntity.unprocessableEntity().build();
+        }
+        return ResponseEntity.ok(bookRepository.findAllByLibrary(optionalLibrary.get(), pageable));
+    }
+
     @PostMapping
     public ResponseEntity<BookEntity> saveBook (@Valid @RequestBody BookEntity book) {
         Optional<LibraryEntity> optionalLibrary = libraryRepository.findById(book.getLibrary().getId());
